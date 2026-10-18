@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quiz-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#question-container {
+    margin-bottom: 30px;
+}
+
+#question {
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    line-height: 1.4;
+}
+
+#options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.option-btn {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #495057;
+}
+
+.option-btn:hover {
+    background: #e9ecef;
+    border-color: #dee2e6;
+    transform: translateY(-2px);
+}
+
+.option-btn.selected {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.option-btn.correct {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.option-btn.incorrect {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#result {
+    text-align: center;
+}
+
+#result h2 {
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+#score, #percentage {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #495057;
+}
+
+@media (max-width: 768px) {
+    .quiz-container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    #options {
+        grid-template-columns: 1fr;
+    }
+    
+    #controls {
+        flex-direction: column;
+    }
+}
